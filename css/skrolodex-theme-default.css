@@ -36,3 +36,7 @@ pre {
   background-color: #261D23;
   padding: 0 30px;
 }
+
+[contenteditable] {
+  outline-color: #A790A5;
+}
