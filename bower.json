@@ -1,0 +1,17 @@
+{
+  "name": "skrolodex",
+  "version": "0.1.0",
+  "authors": [
+    "Aaron Haurwitz <aaron.haurwitz@gmail.com>"
+  ],
+  "description": "Scroll your presentations",
+  "main": "skrolodex.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>skrolodex example</title>
+    <style type="text/css"></style>
+    <link rel="stylesheet" type="text/css" href="../skrolodex.css">
+
+    <script src="../bower_components/skrollr/dist/skrollr.min.js"></script>
+    <script src="../skrolodex.js"></script>
+  </head>
+
+  <body>
+    <section data-out="fade">
+      <h1>Skrolodex Example</h1>
+      <h2>Bringing new meaning to "slides"</h2>
+    </section>
+
+    <section data-in="fade" data-out="scroll">
+      <h2>Some boring topic</h2>
+      <ul>
+        <li>Point 1</li>
+        <li>Point 2</li>
+        <li>Point 1 again cause they're not paying attention</li>
+      </ul>
+    </section>
+
+    <section data-in="zoom">
+      <h2>Code looks like you know what you're talking about</h2>
+      <pre><code>
+function sum(a, b) {
+  return a + b;
+}
+      </code></pre>
+    </section>
+  </body>

@@ -1,0 +1,11 @@
+{
+  "name": "skrolodex",
+  "version": "0.1.0",
+  "description": "Scroll your presentations",
+  "main": "skrolodex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron Haurwitz <aaron.haurwitz@gmail.com>",
+  "license": "MIT"
+}
