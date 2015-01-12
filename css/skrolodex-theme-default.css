@@ -1,0 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+body {
+  font-family: 'Lato';
+  font-size: 28px;
+  background-color: #54414E;
+  color: #C5EBC3;
+}
+
+h1 {
+  font-size: 75px;
+  font-weight: 900;
+  color: #B7C8B5;
+  text-align: center;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #A790A5;
+  text-align: center;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #A790A5;
+}
+
+.content {
+  max-width: 640px;
+  margin: 20px auto;
+}
+
+pre {
+  background-color: #261D23;
+  padding: 0 30px;
+}

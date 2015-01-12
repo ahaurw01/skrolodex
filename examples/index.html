@@ -3,7 +3,8 @@
   <head>
     <title>skrolodex example</title>
     <style type="text/css"></style>
-    <link rel="stylesheet" type="text/css" href="../skrolodex.css">
+    <link rel="stylesheet" type="text/css" href="../css/skrolodex.css">
+    <link rel="stylesheet" type="text/css" href="../css/skrolodex-theme-default.css">
 
     <script src="../bower_components/skrollr/dist/skrollr.min.js"></script>
     <script src="../skrolodex.js"></script>
@@ -17,19 +18,23 @@
 
     <section data-in="fade" data-out="scroll">
       <h2>Some boring topic</h2>
-      <ul>
-        <li>Point 1</li>
-        <li>Point 2</li>
-        <li>Point 1 again cause they're not paying attention</li>
-      </ul>
+      <div class="content">
+        <ul>
+          <li>Point 1</li>
+          <li>Point 2</li>
+          <li>Point 1 again cause they're not paying attention</li>
+        </ul>
+      </div>
     </section>
 
     <section data-in="zoom">
       <h2>Code looks like you know what you're talking about</h2>
-      <pre><code>
+      <div class="content">
+              <pre><code>
 function sum(a, b) {
   return a + b;
 }
-      </code></pre>
+              </code></pre>
+      </div>
     </section>
   </body>
