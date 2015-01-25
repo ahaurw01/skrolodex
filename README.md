@@ -31,6 +31,12 @@ type of effect should take place on slide entry and exit.
 
 The effect defaults to `"scroll"` if you do not specify.
 
+### Lists
+
+By default, list items fade into view in quick succession. You may specify
+`data-list-item-in="..."` on a `<section>` for a different effect. If you
+specify `"none"`, there will be no animation.
+
 ## License
 
 (MIT License)

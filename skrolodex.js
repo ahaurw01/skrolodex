@@ -37,9 +37,11 @@
   };
 
   var defaults = {
-    slideLength: 200, // total length of slide duration, including intro/outro
+    slideLength: 300, // total length of slide duration, including intro/outro
     transitionLength: 50, // length of intro or outro
-    effect: 'scroll'
+    effect: 'scroll',
+    listOffset: 15, // length between list items rolling in
+    staticListItems: false
   };
 
   /**
@@ -60,6 +62,7 @@
     Array.prototype.forEach.call(sections, function (section, index) {
       var inStartPx, inEndPx, outStartPx, outEndPx;
       var inEffect, outEffect;
+      var listItems, listItemStartPx, listItemEffect;
       // Add slide intro attributes for all but the first slide
       if (index > 0) {
         inStartPx = index * defaults.slideLength;
@@ -84,6 +87,21 @@
         }
         section.dataset[outStartPx] = effects[outEffect].out.start;
         section.dataset[outEndPx]   = effects[outEffect].out.end;
+      }
+
+      // Add list item effects
+      if (!defaults.staticListItems &&
+          section.dataset.listItemIn !== 'none') {
+        listItems = section.querySelectorAll('li');
+        listItemStartPx = inEndPx || 0;
+        listItemEffect = section.dataset.listItemIn || 'fade';
+        // Start animating the list items in when slide has fully loaded.
+        // Separate each <li> by defaults.listOffset pixels.
+        Array.prototype.forEach.call(listItems, function (listItem, index) {
+          listItem.dataset[listItemStartPx] = effects[listItemEffect].in.start;
+          listItemStartPx += defaults.listOffset;
+          listItem.dataset[listItemStartPx] = effects[listItemEffect].in.end;
+        });
       }
     });
     skrollr.init();
