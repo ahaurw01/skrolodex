@@ -3,28 +3,28 @@
 body {
   font-family: 'Lato';
   font-size: 28px;
-  background-color: #54414E;
-  color: #C5EBC3;
+  background-color: #6A6958;
+  color: #C8C7B1;
 }
 
 h1 {
   font-size: 75px;
   font-weight: 900;
-  color: #B7C8B5;
+  color: #AAA88E;
   text-align: center;
 }
 
 h2 {
   font-size: 50px;
   font-weight: 700;
-  color: #A790A5;
+  color: #CBC574;
   text-align: center;
 }
 
 h3 {
   font-size: 40px;
   font-weight: 700;
-  color: #A790A5;
+  color: #CBC574;
 }
 
 .content {
@@ -33,10 +33,10 @@ h3 {
 }
 
 pre {
-  background-color: #261D23;
+  background-color: #8B8A73;
   padding: 0 30px;
 }
 
 [contenteditable] {
-  outline-color: #A790A5;
+  outline-color: #CBC574;
 }
