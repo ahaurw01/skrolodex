@@ -37,6 +37,27 @@ By default, list items fade into view in quick succession. You may specify
 `data-list-item-in="..."` on a `<section>` for a different effect. If you
 specify `"none"`, there will be no animation.
 
+## Customization
+
+If you don't like the default values of the skrolodex configuration, you may
+provide your own configuration. Simply create a global object somewhere on the
+page called `skrolodex` that contains a hash called `options`. For example,
+
+```javascript
+skrolodex = {
+  options: {
+    slideLength: 150,
+    transitionLength: 10,
+    effect: 'fade', // 'fade', 'scroll', or 'zoom'
+    listOffset: 2,
+    staticListItems: true // true or false
+  }
+};
+```
+
+These are all the options available. You wouldn't need to set both `listOffset`
+and `staticListItems: true` in this case, but you get the gist.
+
 ## License
 
 (MIT License)

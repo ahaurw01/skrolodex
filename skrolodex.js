@@ -56,6 +56,14 @@
       throw new Error('skrollr was not loaded before skrolodex!');
     }
 
+    // Merge defaults with user-provided options.
+    var options = window.skrolodex.options || {};
+    for (var key in options) {
+      if (options.hasOwnProperty(key)) {
+        defaults[key] = options[key];
+      }
+    }
+
     // Grab ahold of all <section> tags within the document.
     var sections = document.querySelectorAll('section');
     // Set aside a variable for the length of the entire presentation.
