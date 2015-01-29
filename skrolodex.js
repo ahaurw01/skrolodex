@@ -58,11 +58,13 @@
 
     // Grab ahold of all <section> tags within the document.
     var sections = document.querySelectorAll('section');
+    // Set aside a variable for the length of the entire presentation.
+    var endPx;
     // Add the necessary skrollr information to each section
     Array.prototype.forEach.call(sections, function (section, index) {
       var inStartPx, inEndPx, outStartPx, outEndPx;
       var inEffect, outEffect;
-      var listItems, listItemStartPx, listItemEffect;
+      var listItems, listItemStartPx, listItemEndPx, listItemEffect;
       // Add slide intro attributes for all but the first slide
       if (index > 0) {
         inStartPx = index * defaults.slideLength;
@@ -99,11 +101,28 @@
         // Separate each <li> by defaults.listOffset pixels.
         Array.prototype.forEach.call(listItems, function (listItem, index) {
           listItem.dataset[listItemStartPx] = effects[listItemEffect].in.start;
-          listItemStartPx += defaults.listOffset;
-          listItem.dataset[listItemStartPx] = effects[listItemEffect].in.end;
+          listItemEndPx = listItemStartPx + defaults.listOffset;
+          listItem.dataset[listItemEndPx] = effects[listItemEffect].in.end;
+          // Queue up the next item start position.
+          listItemStartPx = listItemEndPx;
         });
       }
+
+      // Keep track of the total length of the presentation.
+      if (outEndPx) {
+        endPx = outEndPx;
+      } else if (listItemEndPx) {
+        endPx = listItemEndPx;
+      }
     });
+
+    // Create a progress track at the bottom of the page.
+    var progressDiv = document.createElement('div');
+    progressDiv.id = 'progress-track';
+    progressDiv.dataset[0] = 'width:0%;';
+    progressDiv.dataset[endPx || 0] = 'width:100%;';
+    document.querySelector('body').appendChild(progressDiv);
+
     skrollr.init();
   }
 

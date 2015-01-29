@@ -16,3 +16,11 @@ section {
   width: 100%;
   height: 100%;
 }
+
+#progress-track {
+  position: fixed;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+}
