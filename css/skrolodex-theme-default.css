@@ -2,29 +2,29 @@
 
 body {
   font-family: 'Lato';
-  font-size: 28px;
-  background-color: #6A6958;
-  color: #C8C7B1;
+  font-size: 36px;
+  background-color: #6A6958; /* Base */
+  color: #D7E8D5; /* Main text */
 }
 
 h1 {
-  font-size: 75px;
+  font-size: 80px;
   font-weight: 900;
-  color: #AAA88E;
+  color: #FFCD57; /* Accent 1 */
   text-align: center;
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 700;
-  color: #CBC574;
+  color: #E8ED76; /* Accent 2 */
   text-align: center;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
-  color: #CBC574;
+  color: #E6F0AF; /* Accent 3 */
 }
 
 .content {
@@ -33,10 +33,13 @@ h3 {
 }
 
 pre {
-  background-color: #8B8A73;
   padding: 0 30px;
 }
 
 [contenteditable] {
-  outline-color: #CBC574;
+  outline-color: #E8ED76; /* Accent 2 */
+}
+
+#progress-track {
+  background-color: #D7E8D5; /* Main text */
 }
